@@ -1,0 +1,107 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Ritik Raj — AI & Quantum Machine Learning Engineer portfolio."> <title>Ritik Raj | AI & QML Engineer</title> <link rel="preconnect" href="https://fonts.googleapis.com/"> <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""> <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <style> :root { --bg: #070b18; --panel: rgba(16,25,53,.64); --text: #edf4ff; --muted: #9aa9c4; --cyan: #2de2e6; --violet: #8b5cf6; --line: rgba(151,176,255,.18); --shadow: 0 20px 70px rgba(0,0,0,.35); } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0px; background: var(--bg); color: var(--text); font-family: Manrope, system-ui, sans-serif; overflow-x: hidden; } body::before { content: ""; position: fixed; inset: 0px; pointer-events: none; background: linear-gradient(rgba(92, 122, 207, 0.055) 1px, transparent 1px) 0% 0% / 44px 44px, linear-gradient(90deg, rgba(92, 122, 207, 0.055) 1px, transparent 1px); mask-image: linear-gradient(black, transparent 78%); z-index: -2; }.orb { position: fixed; border-radius: 50%; filter: blur(70px); opacity: 0.32; pointer-events: none; z-index: -1; animation: 10s ease-in-out 0s infinite normal none running float; }.orb.one { width: 310px; height: 310px; background: rgb(23, 71, 200); top: 5%; left: -110px; }.orb.two { width: 340px; height: 340px; background: rgb(121, 40, 202); right: -110px; top: 30%; animation-delay: -4s; }.orb.three { width: 270px; height: 270px; background: rgb(0, 198, 215); left: 35%; bottom: -120px; animation-delay: -7s; } @keyframes float { 50% { transform: translate(35px, 45px) scale(1.12); } }.wrap { max-width: 1160px; margin: auto; padding: 0px 24px; }.nav { height: 76px; display: flex; align-items: center; justify-content: space-between; position: relative; }.brand { font-family: "DM Mono", monospace; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; color: var(--text); }.brand span { color: var(--cyan); }.navlinks { display: flex; gap: 25px; align-items: center; }.navlinks a { font-size: 0.83rem; color: var(--muted); text-decoration: none; }.navlinks a:hover { color: var(--cyan); }.hero { min-height: 670px; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 85px 0px 75px; flex-wrap: wrap; }.hero-content { flex: 1; min-width: 320px; max-width: 710px; }.eyebrow { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.12em; color: var(--cyan); display: flex; gap: 10px; align-items: center; }.eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--cyan); } h1 { font-size: clamp(3.2rem, 7vw, 5.5rem); line-height: 0.98; letter-spacing: -0.075em; margin: 20px 0px 23px; max-width: 970px; }.gradient { background: linear-gradient(100deg, rgb(255, 255, 255) 21%, rgb(128, 217, 255) 54%, rgb(173, 138, 255) 83%) text; color: transparent; }.lead { color: var(--muted); line-height: 1.8; font-size: 1.07rem; }.buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }.button { border: 1px solid var(--line); border-radius: 9px; padding: 13px 19px; color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 700; transition: 0.25s; }.button.primary { background: linear-gradient(100deg, rgb(20, 110, 175), rgb(106, 56, 188)); border: 0px; box-shadow: rgba(56, 137, 238, 0.27) 0px 9px 30px; }.button:hover { transform: translateY(-3px); border-color: var(--cyan); }.mini-stats { display: flex; gap: 30px; margin-top: 59px; }.stat b { font-size: 1.32rem; }.stat span { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 3px; }.quantum-animation { position: relative; width: 320px; height: 320px; perspective: 1000px; transform-style: preserve-3d; flex-shrink: 0; }.q-core { position: absolute; top: 50%; left: 50%; width: 70px; height: 70px; margin: -35px 0 0 -35px; background: radial-gradient(circle, var(--cyan) 10%, var(--violet) 80%); border-radius: 50%; box-shadow: 0 0 30px var(--cyan), inset 0 0 15px rgba(255,255,255,0.8); animation: q-pulse 2.5s infinite alternate ease-in-out; }.q-orbit { position: absolute; top: 50%; left: 50%; width: 300px; height: 300px; margin: -150px 0 0 -150px; border: 1px solid rgba(45, 226, 230, 0.35); border-radius: 50%; transform-style: preserve-3d; }.q-orbit::before { content: ""; position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 10px var(--cyan); }.q-orbit-1 { animation: q-spin1 6s linear infinite; }.q-orbit-2 { animation: q-spin2 9s linear infinite; }.q-orbit-3 { animation: q-spin3 12s linear infinite; } @keyframes q-pulse { 0% { transform: scale(0.9); box-shadow: 0 0 20px var(--cyan); } 100% { transform: scale(1.15); box-shadow: 0 0 60px var(--violet); } } @keyframes q-spin1 { 0% { transform: rotateX(65deg) rotateY(0deg) rotateZ(0deg); } 100% { transform: rotateX(65deg) rotateY(360deg) rotateZ(360deg); } } @keyframes q-spin2 { 0% { transform: rotateX(65deg) rotateY(120deg) rotateZ(0deg); } 100% { transform: rotateX(65deg) rotateY(480deg) rotateZ(360deg); } } @keyframes q-spin3 { 0% { transform: rotateX(65deg) rotateY(240deg) rotateZ(0deg); } 100% { transform: rotateX(65deg) rotateY(600deg) rotateZ(360deg); } } section { padding: 96px 0px; border-top: 1px solid var(--line); }.section-kicker { font-family: "DM Mono", monospace; font-size: 0.72rem; letter-spacing: 0.13em; color: var(--cyan); text-transform: uppercase; }.section-title { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.055em; margin: 12px 0px 34px; }.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 34px; }.copy { color: var(--muted); font-size: 1.02rem; line-height: 1.85; margin: 0px; }.glass { background: linear-gradient(145deg, rgba(25, 40, 81, 0.65), rgba(14, 21, 47, 0.43)); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 17px; }.identity { padding: 28px; }.avatar { width: 70px; height: 70px; border-radius: 20px; display: grid; place-items: center; background: linear-gradient(135deg, rgb(29, 215, 223), rgb(102, 72, 231)); font-size: 1.4rem; font-weight: 800; margin-bottom: 22px; overflow: hidden; }.avatar img { width: 100%; height: 100%; object-fit: cover; }.identity h3 { margin: 0px 0px 7px; }.identity p { color: var(--muted); font-size: 0.91rem; line-height: 1.7; }.facts { margin-top: 24px; border-top: 1px solid var(--line); }.fact { display: flex; justify-content: space-between; gap: 12px; padding: 13px 0px; border-bottom: 1px solid var(--line); font-size: 0.84rem; }.fact span { color: var(--muted); }.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }.skill-card { padding: 23px; min-height: 155px; transition: 0.25s; }.skill-card:hover,.project:hover { transform: translateY(-6px); border-color: rgba(45, 226, 230, 0.55); }.skill-icon { font-family: "DM Mono", monospace; color: var(--cyan); font-size: 0.83rem; }.skill-card h3 { font-size: 1.05rem; margin: 16px 0px 10px; }.skill-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.65; margin: 0px; }.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }.project { padding: 28px; position: relative; overflow: hidden; transition: 0.25s; }.project::after { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(91, 78, 223, 0.2), transparent 70%); right: -90px; top: -100px; }.tag { font-family: "DM Mono", monospace; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--cyan); text-transform: uppercase; }.project h3 { font-size: 1.55rem; margin: 16px 0px 12px; letter-spacing: -0.04em; }.project p { color: var(--muted); line-height: 1.75; font-size: 0.92rem; min-height: 105px; }.pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0px; }.pill { border: 1px solid var(--line); color: rgb(185, 200, 229); border-radius: 99px; padding: 6px 9px; font-size: 0.7rem; }.project a { color: rgb(185, 249, 250); text-decoration: none; font-size: 0.85rem; font-weight: 700; }.education { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 25px; padding: 30px; }.education h3 { margin: 8px 0px; font-size: 1.3rem; }.education p { color: var(--muted); margin: 0px; line-height: 1.7; }.year { font-family: "DM Mono", monospace; color: var(--cyan); padding: 12px; border: 1px solid rgba(45, 226, 230, 0.3); border-radius: 8px; text-align: center; }.contact { text-align: center; padding: 120px 0px; }.contact.section-title { max-width: 650px; margin: 13px auto 18px; }.contact.copy { max-width: 530px; margin: auto; }.socials { display: flex; justify-content: center; gap: 12px; margin-top: 31px; }.socials a { color: var(--text); text-decoration: none; border: 1px solid var(--line); padding: 10px 13px; border-radius: 8px; font-size: 0.8rem; }.socials a:hover { border-color: var(--cyan); color: var(--cyan); } footer { border-top: 1px solid var(--line); padding: 25px 0px; color: var(--muted); font-size: 0.78rem; text-align: center; } @media (max-width: 900px) {.hero { flex-direction: column-reverse; justify-content: center; text-align: center; gap: 20px; }.hero-content { align-items: center; display: flex; flex-direction: column; }.eyebrow { justify-content: center; }.buttons,.mini-stats { justify-content: center; }.quantum-animation { margin-bottom: 20px; transform: scale(0.85); } } @media (max-width: 760px) {.navlinks { display: none; }.hero { min-height: 600px; padding-top: 60px; }.about-grid,.projects { grid-template-columns: 1fr; }.skill-grid { grid-template-columns: 1fr; }.mini-stats { gap: 17px; }.education { grid-template-columns: 1fr; }.year { justify-self: start; } section { padding: 70px 0px; }.contact { padding: 85px 0px; } }
+/* --- DASHING QML SCENE - ADDED --- */
+.quantum-scene{
+  position:relative;
+  width:360px;
+  height:360px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+}
+#quantumCanvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+.q-core-main{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #2de2e6 25%, #8b5cf6 70%);
+  display:grid;
+  place-items:center;
+  font-family:"DM Mono", monospace;
+  font-weight:800;
+  letter-spacing:0.1em;
+  color:#070b18;
+  box-shadow:0 0 25px #2de2e6, 0 0 60px #8b5cf6, inset 0 0 20px rgba(255,255,255,0.9);
+  animation: corePulse 2s infinite alternate ease-in-out;
+  z-index:2;
+}
+.q-ring{
+  position:absolute;
+  border:1px dashed rgba(45,226,230,0.35);
+  border-radius:50%;
+  z-index:1;
+}
+.q-ring.r1{ width:180px; height:180px; animation: spinTilt1 4s linear infinite; }
+.q-ring.r2{ width:260px; height:260px; animation: spinTilt2 6s linear infinite reverse; }
+.q-ring.r3{ width:340px; height:340px; animation: spinTilt3 8s linear infinite; }
+.q-ring::after{
+  content:"";
+  position:absolute;
+  top:-5px; left:50%;
+  width:10px; height:10px;
+  background:var(--cyan);
+  border-radius:50%;
+  box-shadow:0 0 12px var(--cyan);
+}
+@keyframes corePulse{
+  0%{ transform:scale(0.92) }
+  100%{ transform:scale(1.08) }
+}
+@keyframes spinTilt1{ 0%{ transform:rotateX(70deg) rotateZ(0deg)} 100%{ transform:rotateX(70deg) rotateZ(360deg)} }
+@keyframes spinTilt2{ 0%{ transform:rotateX(70deg) rotateY(60deg) rotateZ(0deg)} 100%{ transform:rotateX(70deg) rotateY(60deg) rotateZ(360deg)} }
+@keyframes spinTilt3{ 0%{ transform:rotateX(70deg) rotateY(-60deg) rotateZ(0deg)} 100%{ transform:rotateX(70deg) rotateY(-60deg) rotateZ(360deg)} }
+
+</style> </head> <body> <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div> <div class="wrap"> <nav class="nav"> <a class="brand" href="#home">RITIK<span>_</span>RAJ</a> <div class="navlinks"> <a href="#about">About</a> <a href="#skills">Skills</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> </div> </nav> <main> <section class="hero" id="home"> <div class="hero-content"> <div class="eyebrow">AI / QUANTUM MACHINE LEARNING</div> <h1>Crafting <span class="gradient">intelligent</span><br>digital futures.</h1> <p class="lead">I’m Ritik Raj—an aspiring AI &amp; Quantum Machine Learning Engineer and full-stack developer, building thoughtful software, data-driven experiences, and practical AI-powered products.</p> <div class="buttons"> <a class="button primary" href="#projects">Explore my work ↓</a> <a class="button" href="mailto:ritikbond49@gmail.com?subject=Portfolio%20Enquiry%20for%20Ritik%20Raj">Let’s connect ↗</a> </div> <div class="mini-stats"> <div class="stat"><b>2029</b><span>Graduation target</span></div> <div class="stat"><b>AI + QML</b><span>Core engineering focus</span></div> <div class="stat"><b>Full Stack</b><span>Build approach</span></div> </div> </div> <!-- Dashing Quantum Machine Learning Animation -->
+    <div class="quantum-scene">
+      <canvas id="quantumCanvas"></canvas>
+      <div class="q-core-main"><span>QML</span></div>
+      <div class="q-ring r1"></div>
+      <div class="q-ring r2"></div>
+      <div class="q-ring r3"></div>
+    </div> </section> <section id="about"> <div class="section-kicker">01 / About</div> <h2 class="section-title">Curious mind. Builder’s approach.</h2> <div class="about-grid"> <p class="copy">I’m a Computer Science and Information Technology student at GL Bajaj Institute of Technology and Management, Greater Noida, graduating in 2029. I’m focused on the intersection of artificial intelligence, deep learning, quantum machine learning, and modern software engineering.<br><br>I enjoy taking ambitious ideas from concept to working product—combining clean frontend experiences with dependable backend logic. I am continuously learning through real projects, exploring computer vision, intelligent systems, and scalable full-stack development.</p> <aside class="glass identity"> <div class="avatar"> <img src="profile.jpg" alt="Ritik Raj Profile Picture"> </div> <h3>Ritik Raj</h3> <p>AI &amp; Quantum Machine Learning Engineer<br>Full-Stack Developer</p> <div class="facts"> <div class="fact"><span>Based in</span><b>Greater Noida, IN</b></div> <div class="fact"><span>Education</span><b>B.Tech CSIT</b></div> <div class="fact"><span>Available for</span><b>Collaborations</b></div> </div> </aside> </div> </section> <section id="skills"> <div class="section-kicker">02 / Toolkit</div> <h2 class="section-title">Skills I’m building with.</h2> <div class="skill-grid"> <article class="glass skill-card"> <div class="skill-icon">01 — INTELLIGENCE</div> <h3>AI &amp; QML</h3> <p>Artificial Intelligence, Machine Learning, Deep Learning, Quantum Machine Learning, and neural-network concepts.</p> </article> <article class="glass skill-card"> <div class="skill-icon">02 — VISION</div> <h3>Computer Vision</h3> <p>Python, OpenCV, image processing, real-time camera pipelines, and AI vision applications.</p> </article> <article class="glass skill-card"> <div class="skill-icon">03 — SOFTWARE</div> <h3>Full-Stack Development</h3> <p>Responsive frontend interfaces, backend logic, web platforms, API integration, and user workflows.</p> </article> <article class="glass skill-card"> <div class="skill-icon">04 — LANGUAGES</div> <h3>Programming</h3> <p>Python, Java, JavaScript, HTML, CSS, and a hands-on approach to learning new tools.</p> </article> <article class="glass skill-card"> <div class="skill-icon">05 — TOOLING</div> <h3>Developer Toolkit</h3> <p>Git, GitHub, Linux, Firebase, Jupyter Notebook, VS Code, Flutter, and Android development.</p> </article> <article class="glass skill-card"> <div class="skill-icon">06 — MINDSET</div> <h3>Problem Solving</h3> <p>Debugging, practical experimentation, iterative project building, and turning ideas into useful products.</p> </article> </div> </section> <section id="projects"> <div class="section-kicker">03 / Selected Work</div> <h2 class="section-title">Projects with purpose.</h2> <div class="projects"> <article class="glass project"> <div class="tag">Live project · B2B e-commerce</div> <h3>myCBT.co.in</h3> <p>A full-stack B2B e-commerce platform for Chhatrapati Balaji Textiles. Designed to showcase technical-textile products—such as waterproof tarpaulins, shade nets, and LDPE sheets—and support product discovery and wholesale enquiries.</p> <div class="pills"> <span class="pill">B2B E-Commerce</span><span class="pill">Frontend</span><span class="pill">Backend</span><span class="pill">Responsive UI</span> </div> <a href="https://mycbt.co.in/" target="_blank" rel="noopener">View live website ↗</a> </article> <article class="glass project"> <div class="tag">In development · AI / Computer Vision</div> <h3>AI Vision Assistant</h3> <p>An AI-powered computer-vision assistant designed to process live camera input and identify objects in real time. The project explores practical image processing, intelligent models, and approachable interface design.</p> <div class="pills"> <span class="pill">Python</span><span class="pill">OpenCV</span><span class="pill">Computer Vision</span><span class="pill">AI Concepts</span> </div> <a href="mailto:ritikbond49@gmail.com?subject=AI%20Vision%20Assistant">Ask about this project ↗</a> </article> </div> </section> <section id="education"> <div class="section-kicker">04 / Education</div> <h2 class="section-title">Learning for what’s next.</h2> <article class="glass education"> <div> <div class="tag">Undergraduate</div> <h3>B.Tech — Computer Science &amp; Information Technology</h3> <p>GL Bajaj Institute of Technology and Management, Greater Noida<br>Focused on computer science, AI, software engineering, and emerging intelligent technologies.</p> </div> <div class="year">Expected<br><strong>2029</strong></div> </article> </section> <section class="contact" id="contact"> <div class="section-kicker">05 / Contact</div> <h2 class="section-title">Let’s build something<br><span class="gradient">meaningful.</span></h2> <p class="copy">Have a project, opportunity, or idea in AI, QML, or software development? I’d be glad to connect.</p> <div class="buttons" style="justify-content:center"> <a class="button primary" href="mailto:ritikbond49@gmail.com?subject=Portfolio%20Enquiry%20for%20Ritik%20Raj">Email Ritik ↗</a> <a class="button" href="#home">Back to top ↑</a> </div> <div class="socials"> <a href="https://github.com/ritikbond7-ui" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://www.linkedin.com/in/ritik-raj-75a071335" target="_blank" rel="noopener">LinkedIn ↗</a> <a href="mailto:ritikbond49@gmail.com">Email ↗</a> </div> </section> </main> </div> <footer>© 2026 Ritik Raj · Designed to explore, build, and evolve.</footer>
+<script>
+// Quantum Entanglement Network - QML Animation
+const canvas = document.getElementById('quantumCanvas');
+const ctx = canvas.getContext('2d');
+function resizeQ(){ canvas.width=360; canvas.height=360; }
+resizeQ();
+const particles = Array.from({length:42}, () => ({
+  x: Math.random()*360, y: Math.random()*360,
+  vx: (Math.random()-0.5)*0.7, vy: (Math.random()-0.5)*0.7,
+  r: Math.random()*1.8+0.8
+}));
+function drawQ(){
+  ctx.clearRect(0,0,360,360);
+  particles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>360) p.vx*=-1;
+    if(p.y<0||p.y>360) p.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(45,226,230,0.85)';
+    ctx.fill();
+  });
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      let dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+      let dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<75){
+        ctx.strokeStyle=`rgba(139,92,246,${1-dist/75})`;
+        ctx.lineWidth=0.5;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(drawQ);
+}
+drawQ();
+</script>
+
+</body> </html>
