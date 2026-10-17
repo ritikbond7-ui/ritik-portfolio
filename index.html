@@ -186,6 +186,42 @@
       z-index: 1;
     }
 
+    /* Baki sections ke background me bhi wahi halka AI watermark */
+    #about, #skills, #projects, #education, #certifications, #contact {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #about > *, #skills > *, #projects > *, #education > *,
+    #certifications > *, #contact > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-mark {
+      position: absolute !important;
+      z-index: 0 !important;
+      top: 50%;
+      transform: translateY(-50%);
+      width: min(480px, 78vw);
+      opacity: .05;
+      pointer-events: none;
+    }
+
+    .section-mark.mark-right { right: -60px; }
+    .section-mark.mark-left { left: -60px; }
+
+    .section-mark svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      animation: wm-spin 90s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .section-mark svg { animation: none; }
+    }
+
     .eyebrow {
       font-family: "DM Mono", monospace;
       font-size: .78rem;
@@ -793,6 +829,45 @@
 
     <main>
 
+      <!-- AI LOGO SYMBOL (sab sections ka watermark yahi se aayega) -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <symbol id="aiMark" viewBox="0 0 600 600">
+            <polygon points="300,40 525,170 525,430 300,560 75,430 75,170"
+                     fill="none" stroke="#2de2e6" stroke-width="5"/>
+            <polygon points="300,95 477,197 477,403 300,505 123,403 123,197"
+                     fill="none" stroke="#2de2e6" stroke-width="2" stroke-dasharray="10 12"/>
+            <polyline points="300,40 300,150" fill="none" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="525,300 420,300" fill="none" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="75,300 180,300" fill="none" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="410,490 355,395" fill="none" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="190,490 245,395" fill="none" stroke="#2de2e6" stroke-width="4"/>
+            <circle cx="300" cy="165" r="11" fill="#2de2e6"/>
+            <circle cx="405" cy="300" r="11" fill="#2de2e6"/>
+            <circle cx="195" cy="300" r="11" fill="#2de2e6"/>
+            <circle cx="348" cy="382" r="10" fill="#2de2e6"/>
+            <circle cx="252" cy="382" r="10" fill="#2de2e6"/>
+            <line x1="255" y1="205" x2="255" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="300" y1="205" x2="300" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="345" y1="205" x2="345" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="255" y1="395" x2="255" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="300" y1="395" x2="300" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="345" y1="395" x2="345" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="255" x2="178" y2="255" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="300" x2="178" y2="300" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="345" x2="178" y2="345" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="255" x2="422" y2="255" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="300" x2="422" y2="300" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="345" x2="422" y2="345" stroke="#2de2e6" stroke-width="5"/>
+            <rect x="205" y="205" width="190" height="190" rx="20"
+                  fill="none" stroke="#2de2e6" stroke-width="7"/>
+            <text x="300" y="338" text-anchor="middle"
+                  font-family="'DM Mono', monospace" font-size="96"
+                  font-weight="700" fill="#2de2e6">AI</text>
+          </symbol>
+        </defs>
+      </svg>
+
       <!-- HERO SECTION -->
       <section class="hero" id="home">
 
@@ -918,6 +993,10 @@
       <!-- ABOUT SECTION -->
       <section id="about">
 
+        <div class="section-mark mark-right" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
+
         <div class="section-kicker">
           01 / About
         </div>
@@ -995,6 +1074,10 @@
 
       <!-- SKILLS SECTION -->
       <section id="skills">
+
+        <div class="section-mark mark-left" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
 
         <div class="section-kicker">
           02 / Toolkit
@@ -1121,6 +1204,10 @@
 
       <!-- PROJECTS SECTION -->
       <section id="projects">
+
+        <div class="section-mark mark-right" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
 
         <div class="section-kicker">
           03 / Selected Work
@@ -1314,6 +1401,10 @@
       <!-- EDUCATION SECTION -->
       <section id="education">
 
+        <div class="section-mark mark-left" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
+
         <div class="section-kicker">
           04 / Education
         </div>
@@ -1359,6 +1450,10 @@
 
       <!-- CERTIFICATIONS SECTION -->
       <section id="certifications">
+
+        <div class="section-mark mark-right" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
 
         <div class="section-kicker">
           05 / Certifications
@@ -1498,6 +1593,10 @@
 
       <!-- CONTACT SECTION -->
       <section class="contact" id="contact">
+
+        <div class="section-mark mark-left" aria-hidden="true">
+          <svg viewBox="0 0 600 600"><use href="#aiMark"/></svg>
+        </div>
 
         <div class="section-kicker">
           06 / Contact
