@@ -135,6 +135,8 @@
     }
 
     .hero {
+      position: relative;
+      overflow: hidden;
       min-height: 670px;
       display: flex;
       align-items: center;
@@ -144,10 +146,44 @@
       flex-wrap: wrap;
     }
 
+    /* Halka AI watermark — background me, sirf ehsaas ke liye */
+    .hero-watermark {
+      position: absolute;
+      right: -70px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: min(600px, 88vw);
+      opacity: .07;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-watermark svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      animation: wm-spin 90s linear infinite;
+    }
+
+    @keyframes wm-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-watermark svg { animation: none; }
+    }
+
     .hero-content {
+      position: relative;
+      z-index: 1;
       flex: 1;
       min-width: 320px;
       max-width: 710px;
+    }
+
+    .quantum-scene {
+      z-index: 1;
     }
 
     .eyebrow {
@@ -759,6 +795,43 @@
 
       <!-- HERO SECTION -->
       <section class="hero" id="home">
+
+        <!-- AI WATERMARK (halka, background me) -->
+        <div class="hero-watermark" aria-hidden="true">
+          <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="300,40 525,170 525,430 300,560 75,430 75,170"
+                     stroke="#2de2e6" stroke-width="5"/>
+            <polygon points="300,95 477,197 477,403 300,505 123,403 123,197"
+                     stroke="#2de2e6" stroke-width="2" stroke-dasharray="10 12"/>
+            <polyline points="300,40 300,150" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="525,300 420,300" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="75,300 180,300" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="410,490 355,395" stroke="#2de2e6" stroke-width="4"/>
+            <polyline points="190,490 245,395" stroke="#2de2e6" stroke-width="4"/>
+            <circle cx="300" cy="165" r="11" fill="#2de2e6"/>
+            <circle cx="405" cy="300" r="11" fill="#2de2e6"/>
+            <circle cx="195" cy="300" r="11" fill="#2de2e6"/>
+            <circle cx="348" cy="382" r="10" fill="#2de2e6"/>
+            <circle cx="252" cy="382" r="10" fill="#2de2e6"/>
+            <line x1="255" y1="205" x2="255" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="300" y1="205" x2="300" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="345" y1="205" x2="345" y2="178" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="255" y1="395" x2="255" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="300" y1="395" x2="300" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="345" y1="395" x2="345" y2="422" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="255" x2="178" y2="255" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="300" x2="178" y2="300" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="205" y1="345" x2="178" y2="345" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="255" x2="422" y2="255" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="300" x2="422" y2="300" stroke="#2de2e6" stroke-width="5"/>
+            <line x1="395" y1="345" x2="422" y2="345" stroke="#2de2e6" stroke-width="5"/>
+            <rect x="205" y="205" width="190" height="190" rx="20"
+                  stroke="#2de2e6" stroke-width="7"/>
+            <text x="300" y="338" text-anchor="middle"
+                  font-family="'DM Mono', monospace" font-size="96"
+                  font-weight="700" fill="#2de2e6">AI</text>
+          </svg>
+        </div>
 
         <div class="hero-content">
 
